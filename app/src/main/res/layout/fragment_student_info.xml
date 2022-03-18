@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="com.nghiemtuananh.fragmentchangeorientationkpt.SinhVien" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#F594FB"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_name_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{data.hoTen, default = `Họ Tên`}"
+        android:textColor="#FF00"
+        android:textSize="40sp"/>
+    <TextView
+        android:id="@+id/tv_namsinh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{`Năm sinh: ` + Integer.toString(data.namSinh), default = `Năm sinh: 1999`}"
+        android:layout_marginTop="10dp"
+        android:textColor="#0040FF"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/tv_diachi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{`Địa chỉ: ` + data.diaChi, default = `Địa chỉ: Hồ Chí Minh`}"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFEB3B"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{`Email: ` + data.email, default = `Email: abc@gmail.com`}"
+        android:layout_marginTop="10dp"
+        android:textColor="#00FFD9"
+        android:textSize="30sp"/>
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.graphics.Color"/>
+        <variable name="data"
+            type="com.nghiemtuananh.fragmentchangeorientationkpt.SinhVien"/>
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="@{data.isChoose ? Color.BLUE : Color.TRANSPARENT}"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:src="@drawable/student_icon"/>
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#0055FF"
+        android:textSize="22sp"
+        android:text="@{data.hoTen, default = `Họ Tên Sinh Viên`}"/>
+
+</LinearLayout>
+</layout>
